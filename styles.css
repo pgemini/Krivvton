@@ -98,12 +98,14 @@ button { background: none; border: 0; cursor: pointer; color: inherit; font: inh
 .brand {
   display: inline-flex; align-items: center; gap: 12px;
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600; font-size: 22px; letter-spacing: 0.02em;
+  font-weight: 500; font-size: 22px; letter-spacing: 0.04em;
 }
 .brand-mark { width: 32px; height: 32px; }
-.brand-text {
+.brand-text { color: var(--text); }
+.brand-text .seam {
   background: var(--accent);
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: -0.02em; font-weight: 600;
 }
 
 .nav-links {
@@ -763,9 +765,14 @@ button { background: none; border: 0; cursor: pointer; color: inherit; font: inh
 .footer-brand { display: flex; align-items: center; gap: 16px; color: var(--gold-2); }
 .footer-name {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 22px; font-weight: 600;
+  font-size: 22px; font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+.footer-name .seam {
   background: var(--accent);
   -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: -0.02em; font-weight: 600;
 }
 .footer-tag { font-size: 13px; color: var(--text-mute); }
 
