@@ -197,20 +197,35 @@ button { background: none; border: 0; cursor: pointer; color: inherit; font: inh
 }
 
 .eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 8px 16px; border: 1px solid var(--line-2);
-  border-radius: 999px; font-size: 13px; color: var(--text-dim);
-  background: var(--glass); backdrop-filter: blur(12px);
-  margin-bottom: 32px;
+  display: inline-flex; align-items: center; gap: 18px;
+  margin-bottom: 36px;
+  font-size: 13px; color: var(--text-dim);
 }
-.eyebrow .dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--gold); box-shadow: 0 0 12px var(--gold);
-  animation: pulse 2s ease-in-out infinite;
+.eb-rule {
+  display: inline-block; width: 28px; height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+  flex-shrink: 0;
 }
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: .5; transform: scale(.85); }
+.eb-italic {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 400;
+  font-size: 18px; line-height: 1;
+  background: var(--accent);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.eb-sep {
+  color: var(--gold); opacity: .6; font-weight: 300;
+  font-size: 14px; transform: translateY(-1px);
+}
+.eb-caps {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--text);
+}
+@media (max-width: 560px) {
+  .eb-rule { width: 18px; }
+  .eyebrow { gap: 12px; flex-wrap: wrap; }
 }
 
 .hero-title {
